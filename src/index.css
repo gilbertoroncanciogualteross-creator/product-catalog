@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+
+  /* Colors */
+  --color-page: #ededed;
+  --color-bg: #ffffff;
+  --color-surface: #f4f4f4;
+  --color-text: #141414;
+  --color-text-muted: #6b6b6b;
+  --color-border: #e4e4e4;
+  --color-accent: #dbf72c;
+  --color-on-accent: #141414;
+  --color-inverse: #141414;
+  --color-on-inverse: #ffffff;
+
+  /* borders */
+  --radius-sm: 0.75rem;
+  --radius-md: 1.5rem;
+  --radius-lg: 2rem;  
+
+  /* Typography */
+  --font-sans: 'Outfit', system-ui, sans-serif;
+}
+
