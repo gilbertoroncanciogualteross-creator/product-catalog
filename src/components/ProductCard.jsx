@@ -6,4 +6,4 @@ export default function ProductCard({ product }) {
       <p>Category: {product.category}</p>
     </li>
   );
-}
+} 

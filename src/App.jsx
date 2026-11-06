@@ -1,15 +1,8 @@
 import { products } from './data/products';
-import ProductCard from './components/ProductCard';
+import ProductList from './components/ProductList';
 
 function App() {
-    console.log(products)
-    return (
-        <ul>
-            {products.map(p => (
-                <ProductCard key={p.id} product={p} />
-            ))}
-        </ul>
-    )
+    return <ProductList products={products} />;
 }
 
-export default App
+export default App; 
