@@ -1,8 +1,8 @@
 export default function Header({ count }) {
     return (
-        <header>
-            <h1>Product Catalog</h1>
-            <p>{count} products</p>
+        <header className="mb-8">
+            <h1 className="text-3xl font-semibold">Product Catalog</h1>
+            <p className="text-text-muted">{count} products</p>
         </header>
     );
 }

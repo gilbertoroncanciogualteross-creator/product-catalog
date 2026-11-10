@@ -6,7 +6,7 @@ export default function ProductList({ products }) {
     }
 
     return (
-        <ul>
+        <ul className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8">
             {products.map(p => (
               <ProductCard key={p.id} product={p} />
             ))}
