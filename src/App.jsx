@@ -8,6 +8,14 @@ function App() {
     const [cart, setCart] = useState([]);
 
     function addToCart(product) {
+        const existing = cart.find(item => item.id === product.id);
+
+        if (existing) {
+            product.quantity += 1;
+        } else {
+            product.quantity = 0;
+        }
+
         setCart([...cart, { ...product, quantity: 1 }]);
         console.log(cart);
     }
