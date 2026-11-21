@@ -1,10 +1,8 @@
 import ProductCard from './ProductCard';
 import { useState } from 'react';
 
-export default function ProductList({ products }) {
+export default function ProductList({ products, onAddToCart }) {
     const [reversed, setReversed] = useState(false);
-
-    
 
     if (products.length === 0) {
         return <p>No products</p>
@@ -20,7 +18,7 @@ export default function ProductList({ products }) {
             </button>
             <ul className="grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-8">
                 {products.map(p => (
-                <ProductCard key={p.id} product={p} />
+                <ProductCard key={p.id} product={p} onAddToCart={onAddToCart}/>
                 ))}
             </ul>
         </>

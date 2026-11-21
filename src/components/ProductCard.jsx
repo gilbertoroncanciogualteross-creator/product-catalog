@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, onAddToCart }) {
 
   const [likes, setLikes] = useState(0);
 
@@ -18,6 +18,8 @@ export default function ProductCard({ product }) {
       >
         ♥ {likes}
       </button>
+
+      <button onClick={() => onAddToCart(product)}>Add to cart</button>
 
     </li>
   );
