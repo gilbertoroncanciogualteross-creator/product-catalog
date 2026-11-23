@@ -8,16 +8,20 @@ function App() {
     const [cart, setCart] = useState([]);
 
     function addToCart(product) {
-        const existing = cart.find(item => item.id === product.id);
+         // A. Look for the product in the cart
+         const existing = cart.find(item => item.id === product.id)
 
-        if (existing) {
-            product.quantity += 1;
-        } else {
-            product.quantity = 0;
-        }
+         // B. If it's there: a new cart with its quantity + 1
+         if (existing){
+            setCart(cart.map(item =>
+                 item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+            ));
+         }
 
-        setCart([...cart, { ...product, quantity: 1 }]);
-        console.log(cart);
+         // C. If not: a new cart with the product added, quantity 1
+         else {
+            setCart([...cart, {...product, quantity: 1}]);
+         }
     }
 
     return (
