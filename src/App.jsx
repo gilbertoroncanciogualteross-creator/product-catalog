@@ -25,11 +25,15 @@ function App() {
          }
     }
 
+    function removeFromCart(id) {
+        setCart(cart.filter(item => item.id !== id))
+    }
+
     return (
         <main className="max-w-[1200px] mx-auto px-8 py-16 font-sans">
             <Header count={products.length} />
             <ProductList products={products} onAddToCart={addToCart} />
-            <Cart cart={cart}/>
+            <Cart cart={cart} onRemove={removeFromCart} />
         </main>
     );
 }
