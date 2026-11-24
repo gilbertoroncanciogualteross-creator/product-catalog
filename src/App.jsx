@@ -2,6 +2,7 @@ import { products } from './data/products';
 import Header from './components/Header'
 import ProductList from './components/ProductList';
 import { useState } from 'react';
+import Cart from './components/Cart';
 
 function App() {
 
@@ -28,7 +29,7 @@ function App() {
         <main className="max-w-[1200px] mx-auto px-8 py-16 font-sans">
             <Header count={products.length} />
             <ProductList products={products} onAddToCart={addToCart} />
-            <p>Cart: {cart.length} items</p>
+            <Cart cart={cart}/>
         </main>
     );
 }
